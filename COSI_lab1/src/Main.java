@@ -21,7 +21,7 @@ public class Main extends Application
     {
         stage.setTitle("COSI_lab1");
 
-        final LineChart<Number, Number> chart = new LineChart<>(new NumberAxis(/*-2 * Math.PI, 2 * Math.PI, Math.PI / 4*/), new NumberAxis());
+        final LineChart<Number, Number> chart = new LineChart<>(new NumberAxis(/*-1 * Math.PI, 1 * Math.PI, Math.PI / 4*/), new NumberAxis());
         chart.setTitle("Base function");
         chart.setLegendVisible(false);
 
@@ -29,7 +29,7 @@ public class Main extends Application
 
         ObservableList<XYChart.Data> data = FXCollections.observableArrayList();
 
-        for(int i = 0; i < 8; i++)
+        for(int i = -8; i <= 8; i++)
         {
             data.add(new XYChart.Data(2 *i * (Math.PI / 8), Math.cos(2 * i * (Math.PI / 8)) + Math.sin(2 * i * (Math.PI / 8))));
         }
